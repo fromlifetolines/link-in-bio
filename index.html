@@ -112,7 +112,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
 </head>
 <body>
-    <canvas style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1;"></canvas>
+    <canvas style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0;"></canvas>
 
     <div class="profile-container">
         <img src="logo.png" alt="From Life To Lines" class="profile-pic">
@@ -138,6 +138,10 @@
         </a>
     </div>
 
+    <!-- 避免流體特效腳本因缺少 Google Analytics 而當機 -->
+    <script>
+        window.ga = window.ga || function(){};
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
